@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Apply — The Connection Retreat</title>
+  <meta name="description" content="Register your interest in The Connection Retreat. No commitment — just a conversation starter." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&family=DM+Sans:ital,opsz,wght@0,9..40,200;0,9..40,300;0,9..40,400;1,9..40,300&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/pages.css" />
+</head>
+<body class="loading">
+
+  <div class="loader" id="loader">
+    <div class="loader__inner">
+      <svg class="loader__symbol" viewBox="0 0 80 80" fill="none">
+        <circle cx="40" cy="40" r="38" stroke="#c9a96e" stroke-width="0.5"/>
+        <circle cx="40" cy="40" r="28" stroke="#c9a96e" stroke-width="0.3" stroke-dasharray="2 4"/>
+        <circle cx="40" cy="40" r="3" fill="#c9a96e"/>
+      </svg>
+      <span class="loader__text">The Connection Retreat</span>
+    </div>
+  </div>
+
+  <nav class="nav" id="nav">
+    <a href="index.html" class="nav__logo">TCR</a>
+    <button class="nav__toggle" id="navToggle" aria-label="Open menu">
+      <span></span><span></span>
+    </button>
+    <div class="nav__menu" id="navMenu">
+      <a href="about.html" class="nav__link">About</a>
+      <a href="retreat.html" class="nav__link">The Retreat</a>
+      <a href="dates.html" class="nav__link">Dates &amp; Pricing</a>
+      <a href="contact.html" class="nav__link nav__link--cta">Apply</a>
+    </div>
+  </nav>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="page-hero__bg"></div>
+    <div class="container">
+      <span class="page-hero__eyebrow reveal-up">Apply</span>
+      <h1 class="page-hero__headline reveal-up">
+        This is the<br>
+        beginning of a<br>
+        <em>conversation.</em>
+      </h1>
+      <p class="page-hero__sub reveal-up">No commitment required. Filling in this form simply opens a door. We'll respond personally — not with an automated sequence.</p>
+    </div>
+  </section>
+
+  <!-- FORM SECTION -->
+  <section class="section contact-section" style="background: var(--black-warm);">
+    <div class="container">
+      <div class="contact-grid">
+
+        <div class="contact-info reveal-up">
+          <div class="label">Before You Fill This In</div>
+          <p style="font-size: 1.05rem; line-height: 1.8; margin-bottom: 32px;">We read every enquiry personally. We're not looking for perfect candidates — we're looking for people who feel genuinely drawn to this kind of experience.</p>
+          <p style="font-size: 1.05rem; line-height: 1.8; margin-bottom: 48px;">If something in you responded to what you read here, that's enough to reach out. The form is short. Be honest rather than impressive.</p>
+
+          <div class="contact-details">
+            <div class="contact-detail">
+              <span class="contact-detail__label">Email</span>
+              <a href="mailto:hello@theconnectionretreat.com" class="contact-detail__value">hello@theconnectionretreat.com</a>
+            </div>
+            <div class="contact-detail">
+              <span class="contact-detail__label">Location</span>
+              <span class="contact-detail__value">International — Europe &amp; Southeast Asia</span>
+            </div>
+            <div class="contact-detail">
+              <span class="contact-detail__label">Group size</span>
+              <span class="contact-detail__value">10–16 guests per edition</span>
+            </div>
+          </div>
+
+          <div class="contact-quote">
+            <blockquote>
+              <p>"We're not a brand selling a product. We're two people who want to create something real — and we're looking for others who want the same."</p>
+              <cite>— Flo &amp; Maria</cite>
+            </blockquote>
+          </div>
+        </div>
+
+        <div class="contact-form-wrap reveal-up">
+          <form class="contact-form" id="contactForm" novalidate>
+            <div class="form-group">
+              <label for="name" class="form-label">Your name</label>
+              <input type="text" id="name" name="name" class="form-input" placeholder="First and last name" required autocomplete="name" />
+            </div>
+
+            <div class="form-group">
+              <label for="email" class="form-label">Email address</label>
+              <input type="email" id="email" name="email" class="form-input" placeholder="your@email.com" required autocomplete="email" />
+            </div>
+
+            <div class="form-group">
+              <label for="location" class="form-label">Where are you based?</label>
+              <input type="text" id="location" name="location" class="form-input" placeholder="City, Country" />
+            </div>
+
+            <div class="form-group">
+              <label for="edition" class="form-label">Which edition interests you?</label>
+              <div class="form-select-wrap">
+                <select id="edition" name="edition" class="form-select">
+                  <option value="" disabled selected>Select an edition</option>
+                  <option value="luxury">Luxury Edition — Europe (~€5,000)</option>
+                  <option value="accessible">Accessible Edition — Southeast Asia (~€1,000)</option>
+                  <option value="both">Both / Open to either</option>
+                  <option value="unsure">Not sure yet</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="experience" class="form-label">What draws you to this? <span class="form-label__note">(optional but welcome)</span></label>
+              <textarea id="experience" name="experience" class="form-textarea" rows="5" placeholder="A few honest sentences about where you are right now, and what you're looking for — or simply what caught your attention about this retreat."></textarea>
+            </div>
+
+            <div class="form-group">
+              <label for="hear" class="form-label">How did you hear about us?</label>
+              <input type="text" id="hear" name="hear" class="form-input" placeholder="Instagram, friend, search..." />
+            </div>
+
+            <div class="form-consent">
+              <label class="form-checkbox">
+                <input type="checkbox" name="consent" required />
+                <span class="form-checkbox__box"></span>
+                <span class="form-checkbox__label">I'm happy to receive a personal response to this enquiry and occasional updates about retreat dates. I understand I can unsubscribe at any time.</span>
+              </label>
+            </div>
+
+            <div class="form-submit">
+              <button type="submit" class="btn btn--gold btn--large">Send Enquiry</button>
+              <p class="form-reassurance">We'll respond within 3–5 working days. No automated emails.</p>
+            </div>
+
+            <div class="form-success" id="formSuccess" style="display: none;">
+              <div class="form-success__inner">
+                <div class="form-success__symbol">&#9670;</div>
+                <h3>Thank you.</h3>
+                <p>We've received your enquiry and will be in touch personally within a few days. In the meantime, if something else comes to mind, you can reach us directly at <a href="mailto:hello@theconnectionretreat.com">hello@theconnectionretreat.com</a>.</p>
+              </div>
+            </div>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__top">
+        <div class="footer__brand">
+          <div class="footer__logo">The Connection Retreat</div>
+          <p class="footer__tagline">Returning people to themselves, to each other,<br>and to the experience of being fully alive.</p>
+        </div>
+        <nav class="footer__nav">
+          <a href="about.html">About</a>
+          <a href="retreat.html">The Retreat</a>
+          <a href="dates.html">Dates &amp; Pricing</a>
+          <a href="contact.html">Apply</a>
+        </nav>
+      </div>
+      <div class="footer__bottom">
+        <p class="footer__copy">&copy; 2026 The Connection Retreat · All rights reserved</p>
+        <div class="footer__elements">
+          <span>&#9650;</span><span>&#9670;</span><span>&#9651;</span><span>&#9711;</span><span>&#9679;</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/contact.js"></script>
+</body>
+</html>
