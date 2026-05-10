@@ -43,6 +43,14 @@
   width: 100%;
   height: 100%;
 }
+.about-person__photo {
+  width: 100%;
+  aspect-ratio: 480 / 560;
+  object-fit: cover;
+  object-position: center 20%;
+  display: block;
+  border: 1px solid rgba(201, 169, 110, 0.12);
+}
 .about-person__number {
   position: absolute;
   bottom: -20px;
