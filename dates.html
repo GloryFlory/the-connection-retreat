@@ -10,6 +10,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&family=DM+Sans:ital,opsz,wght@0,9..40,200;0,9..40,300;0,9..40,400;1,9..40,300&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/styles.css" />
   <link rel="stylesheet" href="css/pages.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
 </head>
 <body class="loading">
 
@@ -25,13 +26,20 @@
   </div>
 
   <nav class="nav" id="nav">
-    <a href="index.html" class="nav__logo">TCR</a>
+    <a href="index.html" class="nav__logo" aria-label="The Connection Retreat">
+      <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg" width="36" height="36">
+        <circle cx="40" cy="40" r="38" stroke="#c9a96e" stroke-width="0.8"/>
+        <circle cx="40" cy="40" r="28" stroke="#c9a96e" stroke-width="0.4" stroke-dasharray="2 4"/>
+        <circle cx="40" cy="40" r="3" fill="#c9a96e"/>
+      </svg>
+    </a>
     <button class="nav__toggle" id="navToggle" aria-label="Open menu">
       <span></span><span></span>
     </button>
     <div class="nav__menu" id="navMenu">
       <a href="about.html" class="nav__link">About</a>
-      <a href="retreat.html" class="nav__link">The Retreat</a>
+      <a href="connection.html" class="nav__link">Connection Retreat</a>
+      <a href="intimacy.html" class="nav__link">Intimacy Retreat</a>
       <a href="dates.html" class="nav__link">Dates &amp; Pricing</a>
       <a href="contact.html" class="nav__link nav__link--cta">Apply</a>
     </div>
@@ -43,143 +51,147 @@
     <div class="container">
       <span class="page-hero__eyebrow reveal-up">Dates &amp; Investment</span>
       <h1 class="page-hero__headline reveal-up">
-        The Connection<br>
-        <em>Retreat.</em>
+        Two retreats.<br>
+        One question:<br>
+        <em>which calls you?</em>
       </h1>
-      <p class="page-hero__sub reveal-up">Dates and venues are being confirmed. Register your interest now — you'll be contacted personally when places become available.</p>
+      <p class="page-hero__sub reveal-up">Dates and venues are being confirmed. Register your interest now — we'll be in touch personally when places open.</p>
     </div>
   </section>
 
-  <!-- DATES NOTICE -->
-  <section class="section" style="background: var(--black-warm); padding-top: 40px; padding-bottom: 40px;">
+  <!-- AVAILABILITY NOTICE -->
+  <section class="section" style="background: var(--black-warm); padding: 32px 0;">
     <div class="container container--narrow">
       <div class="dates-notice reveal-up">
         <div class="dates-notice__icon">&#9670;</div>
         <div>
-          <h3 style="font-family: var(--font-serif); font-size: 1.3rem; color: var(--cream-light); margin-bottom: 10px; font-weight: 400;">Dates being confirmed</h3>
-          <p>The first retreat dates and venue are being finalised. Register your interest now to be contacted personally when places become available — and to begin a conversation about whether this experience is right for you.</p>
+          <h3 style="font-family: var(--font-serif); font-size: 1.2rem; color: var(--cream-light); margin-bottom: 8px; font-weight: 400;">First dates being confirmed now</h3>
+          <p>Both retreats are accepting expressions of interest. Register below and we'll contact you personally — not with a newsletter, but with a real conversation.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- THE RETREAT -->
-  <section class="retreat-offering section" style="background: var(--black);">
-    <div class="container">
-      <div class="offering__inner">
-        <div class="offering__header reveal-up">
-          <span class="offering__region">The Connection Retreat</span>
-          <h2 class="offering__name">A private gathering.<br>A privately-held place.</h2>
-          <p class="offering__tagline">The venue is chosen for one thing: its ability to hold the work.</p>
-        </div>
-        <div class="offering__body">
-          <div class="offering__description reveal-up">
-            <p>The Connection Retreat takes place in a privately-hired property — selected not for its proximity to an airport, but for its quality of stillness. It might be a farmhouse in the hills, a secluded estate, or a villa on the edge of something vast and quiet.</p>
-            <p>We look for places where the environment itself is doing something before a single session begins. Where nature, solitude, and beauty are already working on you. Where you can exhale on arrival and not pick the breath back up until you leave.</p>
-            <p>It is not a hotel retreat. It is a private gathering, held in a setting designed to disappear into — and re-emerge from changed.</p>
-          </div>
-          <div class="offering__detail reveal-up">
-            <div class="offering__includes">
-              <div class="offering__includes-title">What's included</div>
-              <ul>
-                <li>5–7 nights in a privately-hired venue</li>
-                <li>All meals, prepared daily</li>
-                <li>All workshops, sessions, and ceremonies</li>
-                <li>10–16 guests — kept deliberately small</li>
-                <li>Pre-retreat preparation call with a facilitator</li>
-                <li>Post-retreat integration support</li>
-                <li>Arrival and farewell ceremonies</li>
-              </ul>
-            </div>
-            <div class="offering__investment-block">
-              <div class="offering__inv-label">Investment</div>
-              <div class="offering__inv-amount" style="font-size: 1.6rem;">Details on enquiry</div>
-              <div class="offering__inv-sub">per person · fully all-inclusive</div>
-              <p class="offering__inv-note">Pricing is confirmed per venue once the location is secured. No deposit is taken until dates and pricing are confirmed in full.</p>
-              <a href="contact.html" class="btn btn--gold">Register Interest</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- WHAT IS INCLUDED DETAIL -->
-  <section class="section" style="background: var(--black-mid);">
-    <div class="container container--narrow">
-      <div class="label reveal-up">Included</div>
-      <h2 style="font-size: clamp(1.8rem, 3.5vw, 3.2rem); color: var(--cream-light); margin-bottom: 48px;" class="reveal-up">
-        You arrive with nothing<br>
-        to <em>manage.</em>
-      </h2>
-      <div class="included-grid reveal-up">
-        <div class="included-item">
-          <div class="included-item__icon">&#9650;</div>
-          <h4>Accommodation</h4>
-          <p>Private venues chosen for their ability to hold and support the work. You won't be checking into a hotel or managing logistics.</p>
-        </div>
-        <div class="included-item">
-          <div class="included-item__icon">&#9670;</div>
-          <h4>All meals</h4>
-          <p>Nourishing food prepared daily. Communal eating is part of the experience — not a logistics exercise.</p>
-        </div>
-        <div class="included-item">
-          <div class="included-item__icon">&#9651;</div>
-          <h4>All sessions</h4>
-          <p>Every workshop, practice, session, and ceremony across the five days. No extras to purchase.</p>
-        </div>
-        <div class="included-item">
-          <div class="included-item__icon">&#9711;</div>
-          <h4>Pre &amp; post support</h4>
-          <p>A call before you arrive to prepare — and integration support after you leave, because what opens in a retreat needs tending.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- APPLICATION PROCESS -->
+  <!-- TWO RETREATS SIDE BY SIDE -->
   <section class="section" style="background: var(--black);">
+    <div class="container">
+      <div class="dates-retreats">
+
+        <!-- CONNECTION RETREAT -->
+        <div class="dates-retreat-card reveal-up">
+          <div class="dates-retreat-card__header">
+            <span class="dates-retreat-card__eyebrow">5–7 nights · 10–16 people</span>
+            <h2 class="dates-retreat-card__name">The Connection<br>Retreat</h2>
+            <p class="dates-retreat-card__tagline">For individuals seeking deep human connection, aliveness, and a return to themselves.</p>
+          </div>
+          <div class="dates-retreat-card__body">
+            <ul class="dates-retreat-card__includes">
+              <li>5–7 nights at a privately-hired venue</li>
+              <li>All meals, prepared daily</li>
+              <li>All workshops, sessions &amp; ceremonies</li>
+              <li>Five-element framework, card-drawn daily</li>
+              <li>Pre-retreat call · Post-retreat support</li>
+            </ul>
+            <div class="dates-retreat-card__invest">
+              <span class="dates-retreat-card__invest-label">Investment</span>
+              <span class="dates-retreat-card__invest-amount">Details on enquiry</span>
+              <span class="dates-retreat-card__invest-note">per person · fully all-inclusive</span>
+            </div>
+          </div>
+          <div class="dates-retreat-card__foot">
+            <a href="contact.html" class="btn btn--gold">Register Interest</a>
+            <a href="connection.html" class="btn btn--ghost">Full Details</a>
+          </div>
+        </div>
+
+        <!-- INTIMACY RETREAT -->
+        <div class="dates-retreat-card dates-retreat-card--intimacy reveal-up">
+          <div class="dates-retreat-card__header">
+            <span class="dates-retreat-card__eyebrow">2 nights · 3–5 couples</span>
+            <h2 class="dates-retreat-card__name">The Intimacy<br>Retreat</h2>
+            <p class="dates-retreat-card__tagline">For couples ready to move beyond the surface — into trust, honesty, and deeper closeness.</p>
+          </div>
+          <div class="dates-retreat-card__body">
+            <ul class="dates-retreat-card__includes">
+              <li>2 nights at a privately-hired venue</li>
+              <li>All meals, prepared daily</li>
+              <li>All facilitated couple sessions &amp; practices</li>
+              <li>Intimate group of 3–5 couples only</li>
+              <li>Pre-retreat call · Post-retreat integration call</li>
+            </ul>
+            <div class="dates-retreat-card__invest">
+              <span class="dates-retreat-card__invest-label">Investment</span>
+              <span class="dates-retreat-card__invest-amount">Details on enquiry</span>
+              <span class="dates-retreat-card__invest-note">per couple · fully all-inclusive</span>
+            </div>
+          </div>
+          <div class="dates-retreat-card__foot">
+            <a href="contact.html" class="btn btn--gold">Enquire Privately</a>
+            <a href="intimacy.html" class="btn btn--ghost">Full Details</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="section" style="background: var(--black-warm);">
     <div class="container container--narrow">
       <div class="label reveal-up">How It Works</div>
-      <h2 style="font-size: clamp(1.8rem, 3.5vw, 3.2rem); color: var(--cream-light); margin-bottom: 48px;" class="reveal-up">
-        The application<br>
-        <em>process</em>
+      <h2 style="font-size: clamp(1.8rem, 3.5vw, 3.2rem); color: var(--cream-light); margin-bottom: 60px;" class="reveal-up">
+        No automated sequences.<br>
+        <em>Only real conversations.</em>
       </h2>
       <div class="process-steps reveal-up">
         <div class="process-step">
           <div class="process-step__num">01</div>
           <div>
             <h4>Register your interest</h4>
-            <p>Fill in the short form. No commitment, no deposit. Simply a conversation starter.</p>
+            <p>Fill in the short form. No commitment, no deposit — just a conversation starter that reaches a real person.</p>
           </div>
         </div>
         <div class="process-step">
           <div class="process-step__num">02</div>
           <div>
             <h4>We reach out personally</h4>
-            <p>Once dates are confirmed, we'll contact you directly — not with a newsletter, but with a real message about whether this experience feels right for you.</p>
+            <p>When dates are confirmed, we contact you directly to discuss whether this experience is right for you.</p>
           </div>
         </div>
         <div class="process-step">
           <div class="process-step__num">03</div>
           <div>
-            <h4>A brief conversation</h4>
-            <p>We ask everyone to have a short call with one of us before confirming a place. Not gatekeeping — making sure the experience will serve you.</p>
+            <h4>A brief call with one of us</h4>
+            <p>Not gatekeeping — making sure the experience will genuinely serve you. This is as much for you as it is for us.</p>
           </div>
         </div>
         <div class="process-step">
           <div class="process-step__num">04</div>
           <div>
             <h4>Secure your place</h4>
-            <p>Once we're confident it's a fit, a deposit secures your place. Full payment is due before the retreat.</p>
+            <p>A deposit secures your spot once we're confident it's a fit. Full payment is due before the retreat.</p>
           </div>
         </div>
       </div>
-      <div style="margin-top: 56px; text-align: center;" class="reveal-up">
-        <a href="contact.html" class="btn btn--gold">Register Your Interest</a>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section class="section" style="background: var(--black); text-align: center;">
+    <div class="container container--narrow">
+      <h2 style="font-size: clamp(2rem, 4vw, 3.5rem); color: var(--cream-light); margin-bottom: 24px; font-family: var(--font-serif); font-weight: 300;" class="reveal-up">
+        Something in you<br>
+        already <em>knows.</em>
+      </h2>
+      <p style="margin-bottom: 48px; font-size: 1.05rem; color: var(--stone-light);" class="reveal-up">Register your interest now. Early registrants receive priority notice when places open.</p>
+      <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;" class="reveal-up">
+        <a href="contact.html" class="btn btn--gold btn--large">Register Interest</a>
+        <a href="about.html" class="btn btn--ghost btn--large">About Us</a>
       </div>
     </div>
   </section>
+
+
 
   <footer class="footer">
     <div class="container">
@@ -190,7 +202,8 @@
         </div>
         <nav class="footer__nav">
           <a href="about.html">About</a>
-          <a href="retreat.html">The Retreat</a>
+          <a href="connection.html">Connection Retreat</a>
+          <a href="intimacy.html">Intimacy Retreat</a>
           <a href="dates.html">Dates &amp; Pricing</a>
           <a href="contact.html">Apply</a>
         </nav>
@@ -204,6 +217,9 @@
     </div>
   </footer>
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>

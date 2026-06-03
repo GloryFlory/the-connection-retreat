@@ -9,6 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&family=DM+Sans:ital,opsz,wght@0,9..40,200;0,9..40,300;0,9..40,400;1,9..40,300&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
 </head>
 <body class="loading">
 
@@ -26,13 +27,20 @@
 
   <!-- Navigation -->
   <nav class="nav" id="nav">
-    <a href="index.html" class="nav__logo">TCR</a>
+    <a href="index.html" class="nav__logo" aria-label="The Connection Retreat">
+      <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg" width="36" height="36">
+        <circle cx="40" cy="40" r="38" stroke="#c9a96e" stroke-width="0.8"/>
+        <circle cx="40" cy="40" r="28" stroke="#c9a96e" stroke-width="0.4" stroke-dasharray="2 4"/>
+        <circle cx="40" cy="40" r="3" fill="#c9a96e"/>
+      </svg>
+    </a>
     <button class="nav__toggle" id="navToggle" aria-label="Open menu">
       <span></span><span></span>
     </button>
     <div class="nav__menu" id="navMenu">
       <a href="about.html" class="nav__link">About</a>
-      <a href="retreat.html" class="nav__link">The Retreat</a>
+      <a href="connection.html" class="nav__link">Connection Retreat</a>
+      <a href="intimacy.html" class="nav__link">Intimacy Retreat</a>
       <a href="dates.html" class="nav__link">Dates &amp; Pricing</a>
       <a href="contact.html" class="nav__link nav__link--cta">Apply</a>
     </div>
@@ -56,15 +64,40 @@
 
     <!-- Content -->
     <div class="hero__content">
-      <p class="hero__eyebrow">The Connection Retreat</p>
-      <h1 class="hero__headline">
-        Something in you<br>
-        knows it's <em>time.</em>
-      </h1>
-      <p class="hero__body">Not a course. Not a holiday. A rare encounter — with real people, wild nature, and the parts of yourself you haven't introduced to the room yet.</p>
-      <div class="hero__actions">
-        <a href="retreat.html" class="btn btn--gold btn--large">Discover the Experience</a>
-        <a href="contact.html" class="btn btn--ghost btn--large">Apply to Join</a>
+
+      <!-- Retreat selector tabs -->
+      <div class="hero__tabs" role="tablist" aria-label="Select retreat">
+        <button class="hero__tab is-active" role="tab" aria-selected="true"  data-panel="connection">The Connection Retreat</button>
+        <button class="hero__tab"            role="tab" aria-selected="false" data-panel="intimacy">The Intimacy Retreat</button>
+      </div>
+
+      <!-- Swappable panels (stacked via CSS grid) -->
+      <div class="hero__panels">
+
+        <div class="hero__panel is-active" id="heroPanel-connection" role="tabpanel">
+          <h1 class="hero__headline">
+            Something in you<br>
+            knows it's <em>time.</em>
+          </h1>
+          <p class="hero__body">Not a course. Not a holiday. A rare encounter — with real people, wild nature, and the parts of yourself you haven't introduced to the room yet.</p>
+          <div class="hero__actions">
+            <a href="connection.html" class="btn btn--gold btn--large">Discover the Experience</a>
+            <a href="contact.html" class="btn btn--ghost btn--large">Apply to Join</a>
+          </div>
+        </div>
+
+        <div class="hero__panel" id="heroPanel-intimacy" role="tabpanel">
+          <h1 class="hero__headline">
+            Between two people,<br>
+            <em>everything deepens.</em>
+          </h1>
+          <p class="hero__body">A residential weekend for couples — designed to open honest conversations about desire, deepen trust, and help you find each other again at a level that ordinary life rarely reaches.</p>
+          <div class="hero__actions">
+            <a href="intimacy.html" class="btn btn--gold btn--large">Discover the Intimacy Retreat</a>
+            <a href="contact.html" class="btn btn--ghost btn--large">Enquire Privately</a>
+          </div>
+        </div>
+
       </div>
     </div>
 
@@ -74,6 +107,10 @@
     </div>
 
   </div>
+
+  <!-- ===================== PAGE CONTENT WRAPPER ===================== -->
+
+  <div id="content-connection" class="page-content">
 
   <!-- ===================== INTRO ===================== -->
   <section class="intro section" id="intro">
@@ -102,46 +139,6 @@
           <p>Love. Forever at the centre of it.</p>
           <cite>— Flo, co-founder</cite>
         </blockquote>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===================== FOR YOU IF ===================== -->
-  <section class="foryou section foryou--light" id="foryou">
-    <div class="foryou__bg">
-      <div class="foryou__gradient"></div>
-    </div>
-    <div class="container">
-      <div class="foryou__label label reveal-up">Who This Is For</div>
-      <h2 class="foryou__headline reveal-up">This retreat is for you if…</h2>
-      <div class="foryou__grid">
-        <div class="foryou__item reveal-up">
-          <div class="foryou__icon">&#10023;</div>
-          <p>You feel a quiet hunger for something deeper than your current life is offering</p>
-        </div>
-        <div class="foryou__item reveal-up">
-          <div class="foryou__icon">&#10023;</div>
-          <p>You've achieved a lot on paper, yet something essential feels absent</p>
-        </div>
-        <div class="foryou__item reveal-up">
-          <div class="foryou__icon">&#10023;</div>
-          <p>You want genuine connection — with other humans, not just content</p>
-        </div>
-        <div class="foryou__item reveal-up">
-          <div class="foryou__icon">&#10023;</div>
-          <p>You're curious about your body as an instrument of aliveness, not just productivity</p>
-        </div>
-        <div class="foryou__item reveal-up">
-          <div class="foryou__icon">&#10023;</div>
-          <p>You've never done anything like this and feel both drawn and nervous</p>
-        </div>
-        <div class="foryou__item reveal-up">
-          <div class="foryou__icon">&#10023;</div>
-          <p>You want to move, breathe, feel, speak, be witnessed, and go home changed</p>
-        </div>
-      </div>
-      <div class="foryou__note reveal-up">
-        <p>No prior experience with breathwork, yoga, or somatic practice is required. Only a willingness to show up honestly.</p>
       </div>
     </div>
   </section>
@@ -207,21 +204,19 @@
 
   <!-- ===================== FIVE ELEMENTS ===================== -->
   <section class="elements section" id="elements">
+    <canvas class="elements__bg-canvas" id="elementsCanvas"></canvas>
     <div class="container">
-      <div class="elements__label label reveal-up">The Architecture of Experience</div>
-      <h2 class="elements__headline reveal-up">Five days.<br><em>Five elements.</em></h2>
-      <p class="elements__sub reveal-up">Each day holds a distinct emotional quality. The practices within it are drawn from a card deck — making every retreat unique and unrepeatable.</p>
+      <div class="elements__label label" data-aos="fade-right" data-aos-duration="700">The Architecture of Experience</div>
+      <h2 class="elements__headline" data-aos="fade-up" data-aos-delay="150" data-aos-duration="1000">Five days.<br><em>Five elements.</em></h2>
+      <p class="elements__sub" data-aos="fade-up" data-aos-delay="300" data-aos-duration="700">Each day holds a distinct emotional quality. The practices within it are drawn from a card deck — making every retreat unique and unrepeatable.</p>
     </div>
 
     <div class="elements__track">
 
-      <article class="element-card" data-element="earth">
-        <div class="element-card__bg">
-          <div class="element-card__orb"></div>
-        </div>
+      <article class="element-card" data-element="earth" data-aos="fade-up" data-aos-delay="0" data-aos-duration="800">
+        <div class="element-card__bg"><div class="element-card__orb"></div></div>
         <div class="element-card__symbol">
           <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <!-- Earth: downward triangle with crossbar -->
             <polygon points="40,64 12,22 68,22" stroke="currentColor" stroke-width="1" fill="none"/>
             <line x1="20" y1="40" x2="60" y2="40" stroke="currentColor" stroke-width="1"/>
           </svg>
@@ -234,13 +229,10 @@
         </div>
       </article>
 
-      <article class="element-card" data-element="water">
-        <div class="element-card__bg">
-          <div class="element-card__orb"></div>
-        </div>
+      <article class="element-card" data-element="water" data-aos="fade-up" data-aos-delay="100" data-aos-duration="800">
+        <div class="element-card__bg"><div class="element-card__orb"></div></div>
         <div class="element-card__symbol">
           <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <!-- Water: downward triangle -->
             <polygon points="12,22 68,22 40,64" stroke="currentColor" stroke-width="1" fill="none"/>
           </svg>
         </div>
@@ -252,13 +244,10 @@
         </div>
       </article>
 
-      <article class="element-card" data-element="fire">
-        <div class="element-card__bg">
-          <div class="element-card__orb"></div>
-        </div>
+      <article class="element-card" data-element="fire" data-aos="fade-up" data-aos-delay="200" data-aos-duration="800">
+        <div class="element-card__bg"><div class="element-card__orb"></div></div>
         <div class="element-card__symbol">
           <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <!-- Fire: upward triangle -->
             <polygon points="40,16 12,60 68,60" stroke="currentColor" stroke-width="1" fill="none"/>
           </svg>
         </div>
@@ -270,13 +259,10 @@
         </div>
       </article>
 
-      <article class="element-card" data-element="air">
-        <div class="element-card__bg">
-          <div class="element-card__orb"></div>
-        </div>
+      <article class="element-card" data-element="air" data-aos="fade-up" data-aos-delay="300" data-aos-duration="800">
+        <div class="element-card__bg"><div class="element-card__orb"></div></div>
         <div class="element-card__symbol">
           <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <!-- Air: upward triangle with crossbar -->
             <polygon points="40,16 12,60 68,60" stroke="currentColor" stroke-width="1" fill="none"/>
             <line x1="20" y1="42" x2="60" y2="42" stroke="currentColor" stroke-width="1"/>
           </svg>
@@ -289,13 +275,11 @@
         </div>
       </article>
 
-      <article class="element-card" data-element="space">
-        <div class="element-card__bg">
-          <div class="element-card__orb"></div>
-        </div>
+      <article class="element-card" data-element="space" data-aos="fade-up" data-aos-delay="400" data-aos-duration="800">
+        <div class="element-card__bg"><div class="element-card__orb"></div></div>
         <div class="element-card__symbol">
           <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <!-- Space/Aether: circle with central point -->\n            <circle cx="40" cy="40" r="22" stroke="currentColor" stroke-width="1" fill="none"/>
+            <circle cx="40" cy="40" r="22" stroke="currentColor" stroke-width="1" fill="none"/>
             <circle cx="40" cy="40" r="2.5" fill="currentColor"/>
           </svg>
         </div>
@@ -310,261 +294,154 @@
     </div>
   </section>
 
-  <!-- ===================== EXPERIENCE ===================== -->
-  <section class="experience section" id="experience">
-    <div class="experience__bg"></div>
+  <!-- ===================== ELEMENTS INTERACTIVE WHEEL ===================== -->
+  <section class="section" id="elem-wheel" style="background: var(--black);">
     <div class="container">
-      <div class="experience__label label reveal-up">What Actually Happens</div>
-      <h2 class="experience__headline reveal-up">Practices woven<br>into each <em>day</em></h2>
-      <div class="experience__grid">
-        <div class="experience__item reveal-up">
-          <span class="experience__num">01</span>
-          <div>
-            <h4>Breathwork</h4>
-            <p>Guided breathing practices that bypass the thinking mind and open direct access to the body's intelligence</p>
-          </div>
+      <div class="label reveal-up">The Five Days</div>
+      <h2 style="font-size:clamp(2rem,4vw,3.5rem);color:var(--cream-light);margin:16px 0 60px;line-height:1.2;" class="reveal-up">Choose an element.<br><em>See what it holds.</em></h2>
+      <div class="wheel-explorer" id="elemExplorer">
+        <div class="wheel-explorer__left">
+          <svg class="wheel-explorer__svg" id="elemWheelSvg" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg"></svg>
         </div>
-        <div class="experience__item reveal-up">
-          <span class="experience__num">02</span>
-          <div>
-            <h4>Partner Movement</h4>
-            <p>The practice of trust, weight, and physical dialogue — two bodies finding a shared centre of gravity</p>
-          </div>
-        </div>
-        <div class="experience__item reveal-up">
-          <span class="experience__num">03</span>
-          <div>
-            <h4>Authentic Relating</h4>
-            <p>Structured and unstructured exercises in radical honesty, deep listening, and being truly seen</p>
-          </div>
-        </div>
-        <div class="experience__item reveal-up">
-          <span class="experience__num">04</span>
-          <div>
-            <h4>Thai Massage</h4>
-            <p>Therapeutic touch, nervous system reset, the healing power of being received without agenda</p>
-          </div>
-        </div>
-        <div class="experience__item reveal-up">
-          <span class="experience__num">05</span>
-          <div>
-            <h4>Presence Practice</h4>
-            <p>The art of meeting life, sensation, and each other without shrinking — or performing</p>
-          </div>
-        </div>
-        <div class="experience__item reveal-up">
-          <span class="experience__num">06</span>
-          <div>
-            <h4>Free Movement</h4>
-            <p>No mirrors, no phones, no performance — the body moves when the mind steps aside</p>
-          </div>
-        </div>
-        <div class="experience__item reveal-up">
-          <span class="experience__num">07</span>
-          <div>
-            <h4>Somatic Practice</h4>
-            <p>Listening to sensation, tracking aliveness, the body as the place where everything real lives</p>
-          </div>
-        </div>
-        <div class="experience__item reveal-up">
-          <span class="experience__num">08</span>
-          <div>
-            <h4>Meditation &amp; Ritual</h4>
-            <p>Morning practices, ceremonial closings, the architecture of intentional time together</p>
+        <div class="wheel-explorer__panel" id="elemPanel">
+          <span class="wheel-explorer__eyebrow" id="elemDayLabel">Day One</span>
+          <h3 class="wheel-explorer__name" id="elemName">Earth</h3>
+          <p class="wheel-explorer__quality" id="elemQuality">Grounding · Self-connection · Nervous system</p>
+          <p class="wheel-explorer__desc" id="elemDesc">We arrive. We slow down. We feel the weight of our own bodies and learn to inhabit them again. Somatic awareness. Stillness. The ground beneath everything.</p>
+          <div class="wheel-explorer__arrows">
+            <button class="wheel-explorer__arrow" id="elemPrev" aria-label="Previous element">&#8592;</button>
+            <button class="wheel-explorer__arrow" id="elemNext" aria-label="Next element">&#8594;</button>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ===================== FACILITATORS ===================== -->
-  <section class="facilitators section" id="facilitators">
-    <div class="container">
-      <div class="facilitators__label label reveal-up">The Guides</div>
-      <h2 class="facilitators__headline reveal-up">Co-created by two people<br>who <em>live</em> what they teach</h2>
-      <div class="facilitators__grid">
-
-        <article class="facilitator-card reveal-up">
-          <div class="facilitator-card__portrait">
-            <img class="facilitator-card__photo" src="maria%20mask.jpg" alt="Maria" />
-            <div class="facilitator-card__glow"></div>
-          </div>
-          <div class="facilitator-card__content">
-            <h3 class="facilitator-card__name">Maria</h3>
-            <p class="facilitator-card__role">Co-Facilitator · Yoga Teacher · Embodiment Guide</p>
-            <p class="facilitator-card__bio">Maria brings years of training in yoga, acroyoga, and tantra to her facilitation — alongside a rare capacity for holding people at their edges with warmth and precision. She is the ground that others feel safe to be met by.</p>
-            <div class="facilitator-card__tags">
-              <span>Yoga</span><span>Acroyoga</span><span>Tantra</span><span>Embodiment</span>
-            </div>
-          </div>
-        </article>
-
-        <article class="facilitator-card reveal-up">
-          <div class="facilitator-card__portrait">
-            <img class="facilitator-card__photo" src="flo%20mask.jpg" alt="Flo" />
-            <div class="facilitator-card__glow"></div>
-          </div>
-          <div class="facilitator-card__content">
-            <h3 class="facilitator-card__name">Flo</h3>
-            <p class="facilitator-card__role">Co-Founder · SOMA Breathwork · Thai Massage</p>
-            <p class="facilitator-card__bio">Flo has organised and facilitated retreats internationally and brings to this work a background in SOMA breathwork, yoga, acroyoga, tantra, and Thai massage. He is driven by a belief that the conditions for genuine human connection can be consciously designed.</p>
-            <div class="facilitator-card__tags">
-              <span>SOMA Breathwork</span><span>Thai Massage</span><span>Yoga</span><span>Retreat Design</span>
-            </div>
-          </div>
-        </article>
-
-      </div>
-      <div class="facilitators__cta reveal-up">
-        <a href="about.html" class="btn btn--ghost">Read Our Story</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===================== TESTIMONIALS ===================== -->
-  <section class="testimonials section" id="testimonials">
-    <div class="testimonials__bg">
-      <div class="testimonials__gradient"></div>
-    </div>
-    <div class="container">
-      <div class="testimonials__label label reveal-up">Those Who Have Felt It</div>
-      <h2 class="testimonials__headline reveal-up"><em>Words from</em><br>the experience</h2>
-      <div class="testimonials__grid">
-        <blockquote class="testimonial reveal-up">
-          <p>"I came not knowing what to expect and left not being able to explain what happened. That feels exactly right. Something shifted that I'd been trying to shift for years."</p>
-          <cite>— Workshop participant, 2024</cite>
-        </blockquote>
-        <blockquote class="testimonial reveal-up">
-          <p>"The combination of breathwork, touch, movement and honest conversation created something I didn't know was available to me. I felt like myself for the first time in a long time."</p>
-          <cite>— Retreat attendee</cite>
-        </blockquote>
-        <blockquote class="testimonial reveal-up">
-          <p>"Flo and Maria hold a rare quality: they make you feel safe enough to be brave. That's not a small thing."</p>
-          <cite>— Workshop participant</cite>
-        </blockquote>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===================== INVESTMENT ===================== -->
-  <section class="where section" id="pricing">
-    <div class="container">
-      <div class="label reveal-up">The Investment</div>
-      <h2 class="where__headline reveal-up">
-        Everything you need.<br>
-        Nothing to <em>manage.</em>
-      </h2>
-      <p class="where__intro reveal-up">The retreat is all-inclusive. You arrive and are held — by the place, by the people, by the structure of the experience. What's asked of you is only your presence.</p>
-
-      <article class="where__card where__card--single reveal-up">
-        <div class="where__card-region">The Connection Retreat</div>
-        <div class="where__card-body">
-          <h3 class="where__card-name">What's included</h3>
-          <ul class="where__card-includes">
-            <li>5–7 nights in a privately-hired venue</li>
-            <li>All meals, prepared daily</li>
-            <li>All workshops, sessions and ceremonies</li>
-            <li>Pre-retreat preparation call with a facilitator</li>
-            <li>Post-retreat integration support</li>
-            <li>10–16 guests — kept deliberately small</li>
-          </ul>
-        </div>
-        <div class="where__card-foot">
-          <div class="where__card-investment">
-            <span class="where__card-inv-label">Investment</span>
-            <span class="where__card-inv-amount">Details on enquiry</span>
-            <span class="where__card-inv-note">per person · fully all-inclusive</span>
-          </div>
-          <a href="contact.html" class="btn btn--gold">Register Interest</a>
-        </div>
-      </article>
-
-      <p class="where__note reveal-up">Dates and venues are being confirmed. Registering your interest now opens a direct conversation — not an automated sequence.</p>
-    </div>
-  </section>
-
-  <!-- ===================== FAQ ===================== -->
-  <section class="faq section" id="faq">
+  <!-- ===================== DISCOVERY CTA ===================== -->
+  <section class="discovery-cta">
     <div class="container container--narrow">
-      <div class="faq__label label reveal-up">Questions</div>
-      <h2 class="faq__headline reveal-up">Answered honestly,<br><em>without spin</em></h2>
-      <div class="faq__list">
-
-        <details class="faq__item reveal-up">
-          <summary class="faq__question">Do I need experience in yoga, breathwork, or somatic practice?</summary>
-          <div class="faq__answer">
-            <p>No. The retreat is designed to be accessible to people at all levels of experience. What matters is not what you know but your willingness to be present and engaged. Many past participants have come with no background in any of the practices offered.</p>
-          </div>
-        </details>
-
-        <details class="faq__item reveal-up">
-          <summary class="faq__question">What does "tantra" mean in this context?</summary>
-          <div class="faq__answer">
-            <p>Nothing to be alarmed by. In the context of this retreat, tantra refers to the practice of full presence — meeting your experience, your sensations, and other people without suppressing or dramatising. It is about being alive to what is here, not about sexuality. Though it may touch on themes of intimacy, boundary, and authentic connection.</p>
-          </div>
-        </details>
-
-        <details class="faq__item reveal-up">
-          <summary class="faq__question">How many people attend each retreat?</summary>
-          <div class="faq__answer">
-            <p>Between 10 and 16 guests. This is intentional. The work requires real intimacy to function, and intimacy requires smallness. You will not be anonymous here.</p>
-          </div>
-        </details>
-
-        <details class="faq__item reveal-up">
-          <summary class="faq__question">Is every retreat different?</summary>
-          <div class="faq__answer">
-            <p>Yes. While the five-element framework remains consistent, the specific workshops within each day are drawn from a card deck at the start of that day. This means no two editions of the retreat are identical — including multiple editions in the same location.</p>
-          </div>
-        </details>
-
-        <details class="faq__item reveal-up">
-          <summary class="faq__question">Is this safe? What is your safeguarding approach?</summary>
-          <div class="faq__answer">
-            <p>Safety and consent are foundational to this work, not peripheral. We are in the process of finalising our consent and safeguarding framework before applications formally open. All practices are introduced with clear framing, and participation in any exercise is always an invitation, never a requirement. More detail will be available before any bookings are confirmed.</p>
-          </div>
-        </details>
-
-        <details class="faq__item reveal-up">
-          <summary class="faq__question">When is the first retreat?</summary>
-          <div class="faq__answer">
-            <p>Dates are currently being finalised alongside venue selection. If you register your interest now, you will be among the first to be notified — and given priority access to secure a place.</p>
-          </div>
-        </details>
-
+      <p class="discovery-cta__line reveal-up">Five days. Five elements. Every edition unrepeatable.</p>
+      <div class="discovery-cta__actions reveal-up">
+        <a href="connection.html" class="btn btn--gold btn--large">Explore the Full Experience</a>
+        <a href="contact.html" class="btn btn--ghost btn--large">Apply to Join</a>
       </div>
     </div>
   </section>
 
-  <!-- ===================== FINAL CTA ===================== -->
-  <section class="finalcta section" id="finalcta">
-    <div class="finalcta__bg">
-      <div class="finalcta__gradient"></div>
-      <div class="finalcta__noise"></div>
-      <div class="finalcta__orb finalcta__orb--1"></div>
-      <div class="finalcta__orb finalcta__orb--2"></div>
-    </div>
-    <div class="container container--narrow finalcta__content">
-      <div class="finalcta__symbol reveal-up">
-        <svg viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg" width="60" height="60">
-          <circle cx="30" cy="30" r="28" stroke="#c9a96e" stroke-width="0.5"/>
-          <circle cx="30" cy="30" r="20" stroke="#c9a96e" stroke-width="0.3" stroke-dasharray="2 4"/>
-          <circle cx="30" cy="30" r="2" fill="#c9a96e"/>
-        </svg>
+  </div><!-- /content-connection -->
+
+  <!-- ===================== INTIMACY CONTENT ===================== -->
+  <div id="content-intimacy" class="page-content" hidden>
+
+    <!-- INTIMACY INTRO -->
+    <section class="intro section">
+      <div class="container container--narrow">
+        <div class="intro__label label reveal-up">A Retreat For Two</div>
+        <h2 class="intro__headline reveal-up">
+          Between two people,<br>
+          there is always <em>more.</em>
+        </h2>
+        <div class="intro__body reveal-up">
+          <p>Most relationships reach a certain depth — and quietly stop there. Not from lack of love, but from lack of space. The right conversation never quite happens. The desire you carry stays unspoken. The closeness you remember becomes something you're working to find again.</p>
+          <p>A residential weekend for couples, facilitated by Flo and Maria — drawing from somatic practice, conscious sexuality, breathwork, and authentic relating.</p>
+        </div>
       </div>
-      <h2 class="finalcta__headline reveal-up">
-        Something in you<br>
-        already <em>knows</em><br>
-        whether this is for you.
-      </h2>
-      <p class="finalcta__sub reveal-up">Trust that. Register your interest and we'll be in touch when places are available.</p>
-      <div class="finalcta__actions reveal-up">
-        <a href="contact.html" class="btn btn--gold btn--large">Apply to Join</a>
-        <a href="retreat.html" class="btn btn--ghost">Learn More</a>
+    </section>
+
+    <!-- INTIMACY ARC: SCROLL-DRIVEN CANVAS -->
+    <section class="intimacy-arc" id="intimacy-arc">
+      <div class="intimacy-arc__sticky">
+        <canvas class="intimacy-arc__canvas" id="intimacyCanvas"></canvas>
+        <div class="intimacy-arc__ui">
+          <div class="intimacy-arc__top">
+            <span class="label">The Intimacy Arc</span>
+          </div>
+          <div class="intimacy-arc__center">
+            <div class="intimacy-arc__icon-wrap" id="intimacyIconWrap">
+              <svg class="intimacy-arc__icon" id="intimacyIcon0" viewBox="0 0 120 120" fill="none">
+                <circle cx="38" cy="60" r="22" stroke="currentColor" stroke-width="1.2" fill="none"/>
+                <circle cx="82" cy="60" r="22" stroke="currentColor" stroke-width="1.2" fill="none"/>
+              </svg>
+              <svg class="intimacy-arc__icon intimacy-arc__icon--hidden" id="intimacyIcon1" viewBox="0 0 120 120" fill="none">
+                <circle cx="50" cy="60" r="26" stroke="currentColor" stroke-width="1.2" fill="none"/>
+                <circle cx="70" cy="60" r="26" stroke="currentColor" stroke-width="1.2" fill="none"/>
+                <circle cx="60" cy="60" r="2.5" fill="currentColor"/>
+              </svg>
+              <svg class="intimacy-arc__icon intimacy-arc__icon--hidden" id="intimacyIcon2" viewBox="0 0 120 120" fill="none">
+                <circle cx="60" cy="60" r="32" stroke="currentColor" stroke-width="1.2" fill="none"/>
+                <circle cx="60" cy="60" r="20" stroke="currentColor" stroke-width="0.6" stroke-dasharray="3 5" fill="none"/>
+                <circle cx="60" cy="60" r="3" fill="currentColor"/>
+              </svg>
+            </div>
+            <h3 class="intimacy-arc__name" id="intimacyName">Arrival</h3>
+            <p class="intimacy-arc__quality" id="intimacyQuality">Landing · Safety · First Honesty</p>
+            <p class="intimacy-arc__verse" id="intimacyVerse">You arrive together. Something opens before you've named what it is.</p>
+          </div>
+          <div class="intimacy-arc__bottom">
+            <div class="intimacy-arc__hint" id="intimacyHint">
+              <span>Scroll through the arc</span>
+              <div class="intimacy-arc__hint-line"></div>
+            </div>
+            <div class="intimacy-arc__progress-wrap">
+              <div class="intimacy-arc__progress-bar">
+                <div class="intimacy-arc__progress-fill" id="intimacyFill"></div>
+              </div>
+              <div class="intimacy-arc__progress-stages">
+                <span class="active">Arrival</span>
+                <span>The Deep</span>
+                <span>Return</span>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <p class="finalcta__reassurance reveal-up">No commitment required. Registering your interest is simply a conversation starter.</p>
-    </div>
-  </section>
+    </section>
+
+    <!-- INTIMACY PILLARS WHEEL -->
+    <section class="section" id="phase-wheel" style="background: var(--black);">
+      <div class="container">
+        <div class="label reveal-up">Five Pillars of Intimacy</div>
+        <h2 style="font-size:clamp(2rem,4vw,3.5rem);color:var(--cream-light);margin:16px 0 60px;line-height:1.2;" class="reveal-up">What we work with.<br><em>Choose one to explore.</em></h2>
+        <div class="wheel-explorer" id="phaseExplorer">
+          <div class="wheel-explorer__left">
+            <svg class="wheel-explorer__svg" id="phaseWheelSvg" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg"></svg>
+          </div>
+          <div class="wheel-explorer__panel" id="phasePanel">
+            <span class="wheel-explorer__eyebrow" id="phaseDayLabel">Foundation</span>
+            <h3 class="wheel-explorer__name" id="phaseName">Trust</h3>
+            <p class="wheel-explorer__quality" id="phaseQuality">Safety · Consistency · Surrender</p>
+            <p class="wheel-explorer__desc" id="phaseDesc">Intimacy cannot be forced — only created. It grows in environments where it's consistently safe to be honest, to need, and to be imperfect. We work with what gets in the way of trust forming — and with what happens when it finally does.</p>
+            <div class="wheel-explorer__arrows">
+              <button class="wheel-explorer__arrow" id="phasePrev" aria-label="Previous">&#8592;</button>
+              <button class="wheel-explorer__arrow" id="phaseNext" aria-label="Next">&#8594;</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- INTIMACY BREATHING RESONANCE CANVAS -->
+    <section class="breathe-section" id="breathe-canvas">
+      <canvas class="breathe-canvas__el" id="breatheCanvas"></canvas>
+      <div class="breathe-content">
+        <span class="label">Somatic Practice</span>
+        <h3 class="breathe-headline">Breathe together.<br><em>Feel what opens.</em></h3>
+        <p class="breathe-sub">Guided breathing practices that bypass habitual defences — done in proximity and rhythm, with your partner beside you.</p>
+      </div>
+    </section>
+
+    <!-- INTIMACY DISCOVERY CTA -->
+    <section class="discovery-cta">
+      <div class="container container--narrow">
+        <p class="discovery-cta__line reveal-up">Two nights. Three to five couples. Intimate by design.</p>
+        <div class="discovery-cta__actions reveal-up">
+          <a href="intimacy.html" class="btn btn--gold btn--large">Explore the Full Programme</a>
+          <a href="contact.html" class="btn btn--ghost btn--large">Enquire Privately</a>
+        </div>
+      </div>
+    </section>
+
+  </div><!-- /content-intimacy -->
 
   <!-- ===================== FOOTER ===================== -->
   <footer class="footer">
@@ -576,7 +453,8 @@
         </div>
         <nav class="footer__nav">
           <a href="about.html">About</a>
-          <a href="retreat.html">The Retreat</a>
+          <a href="connection.html">Connection Retreat</a>
+          <a href="intimacy.html">Intimacy Retreat</a>
           <a href="dates.html">Dates &amp; Pricing</a>
           <a href="contact.html">Apply</a>
         </nav>
@@ -594,6 +472,9 @@
     </div>
   </footer>
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>

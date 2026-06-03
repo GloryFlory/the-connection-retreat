@@ -3,13 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>The Retreat — The Connection Retreat</title>
+  <title>Connection Retreat — The Connection Retreat</title>
   <meta name="description" content="Five days. Five elements. A card deck drawn at random. The format, philosophy and practices of The Connection Retreat." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&family=DM+Sans:ital,opsz,wght@0,9..40,200;0,9..40,300;0,9..40,400;1,9..40,300&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/styles.css" />
   <link rel="stylesheet" href="css/pages.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
 </head>
 <body class="loading">
 
@@ -25,13 +26,20 @@
   </div>
 
   <nav class="nav" id="nav">
-    <a href="index.html" class="nav__logo">TCR</a>
+    <a href="index.html" class="nav__logo" aria-label="The Connection Retreat">
+      <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg" width="36" height="36">
+        <circle cx="40" cy="40" r="38" stroke="#c9a96e" stroke-width="0.8"/>
+        <circle cx="40" cy="40" r="28" stroke="#c9a96e" stroke-width="0.4" stroke-dasharray="2 4"/>
+        <circle cx="40" cy="40" r="3" fill="#c9a96e"/>
+      </svg>
+    </a>
     <button class="nav__toggle" id="navToggle" aria-label="Open menu">
       <span></span><span></span>
     </button>
     <div class="nav__menu" id="navMenu">
       <a href="about.html" class="nav__link">About</a>
-      <a href="retreat.html" class="nav__link">The Retreat</a>
+      <a href="connection.html" class="nav__link nav__link--active">Connection Retreat</a>
+      <a href="intimacy.html" class="nav__link">Intimacy Retreat</a>
       <a href="dates.html" class="nav__link">Dates &amp; Pricing</a>
       <a href="contact.html" class="nav__link nav__link--cta">Apply</a>
     </div>
@@ -309,6 +317,48 @@
     </div>
   </section>
 
+  <!-- FACILITATORS -->
+  <section class="facilitators section" style="background: var(--black-warm);">
+    <div class="container">
+      <div class="facilitators__label label reveal-up">Your Guides</div>
+      <h2 class="facilitators__headline reveal-up">Two people who<br><em>live</em> what they teach</h2>
+      <p style="max-width: 600px; margin: 0 auto 72px; text-align: center; color: var(--stone-light); font-size: 0.95rem; line-height: 1.7;" class="reveal-up">Flo and Maria have facilitated together internationally — and bring to this work not just professional training, but a shared belief that the conditions for real human connection can be consciously designed.</p>
+      <div class="facilitators__grid">
+        <article class="facilitator-card reveal-up">
+          <div class="facilitator-card__portrait">
+            <img class="facilitator-card__photo" src="maria%20mask.jpg" alt="Maria" />
+            <div class="facilitator-card__glow"></div>
+          </div>
+          <div class="facilitator-card__content">
+            <h3 class="facilitator-card__name">Maria</h3>
+            <p class="facilitator-card__role">Co-Facilitator · Yoga Teacher · Embodiment Guide</p>
+            <p class="facilitator-card__bio">Maria brings years of training in yoga, acroyoga, and tantra to her facilitation — alongside a rare capacity for holding people at their edges with warmth and precision. She is the ground that others feel safe to be met by.</p>
+            <div class="facilitator-card__tags">
+              <span>Yoga</span><span>Acroyoga</span><span>Tantra</span><span>Embodiment</span>
+            </div>
+          </div>
+        </article>
+        <article class="facilitator-card reveal-up">
+          <div class="facilitator-card__portrait">
+            <img class="facilitator-card__photo" src="flo%20mask.jpg" alt="Flo" />
+            <div class="facilitator-card__glow"></div>
+          </div>
+          <div class="facilitator-card__content">
+            <h3 class="facilitator-card__name">Flo</h3>
+            <p class="facilitator-card__role">Co-Founder · SOMA Breathwork · Thai Massage · Retreat Design</p>
+            <p class="facilitator-card__bio">Flo has organised and facilitated retreats internationally and brings a background in SOMA breathwork, yoga, acroyoga, tantra, and Thai massage. He is driven by a belief that the conditions for genuine human connection can be consciously designed — and that this retreat is the proof of concept.</p>
+            <div class="facilitator-card__tags">
+              <span>SOMA Breathwork</span><span>Thai Massage</span><span>Yoga</span><span>Retreat Design</span>
+            </div>
+          </div>
+        </article>
+      </div>
+      <div class="facilitators__cta reveal-up">
+        <a href="about.html" class="btn btn--ghost">Our Story</a>
+      </div>
+    </div>
+  </section>
+
   <!-- CTA -->
   <section class="section" style="background: var(--black); text-align: center;">
     <div class="container container--narrow">
@@ -333,7 +383,8 @@
         </div>
         <nav class="footer__nav">
           <a href="about.html">About</a>
-          <a href="retreat.html">The Retreat</a>
+          <a href="connection.html">Connection Retreat</a>
+          <a href="intimacy.html">Intimacy Retreat</a>
           <a href="dates.html">Dates &amp; Pricing</a>
           <a href="contact.html">Apply</a>
         </nav>
@@ -347,6 +398,9 @@
     </div>
   </footer>
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>
